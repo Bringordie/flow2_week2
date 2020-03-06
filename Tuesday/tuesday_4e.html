@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <button id="filterA" type="button" onclick="namesContainingLowercaseA()">filter names with 'a'</button>
+        <div id=names> 
+            
+        </div>
+
+        <script>
+            let divcontent = document.querySelector("#names");
+            var names = [{name:"Lars",phone:"1234567"}, {name: "Peter",phone: "675843"}, {name: "Jan", phone: "98547"},{name: "Bo", phone: "79345"}];
+
+            var table = name =>
+    "<tr>\n"
+    + "<td>" + name.name + "</td>\n"
+    + "<td>" + name.phone + "</td>\n"
+    + "</tr>\n";
+    
+var header = "<tr>\n"
+        + "<th>Name</th>\n"
+        + "<th>Phone</th>\n"
+        + "</tr>\n";
+
+var result = '<table>\n'
+        + header
+        + names.map(table).join("") + '</table>';
+        divcontent.innerHTML = result;
+
+        function namesContainingLowercaseA() {
+            let personarray = names;
+            let filterarray = personarray.filter(word => word.name.includes("a"));
+
+        var result = "<table>\n"
+        + header
+        + filterarray.map(table).join("") + "</table>";
+        divcontent.innerHTML = result;
+
+        }
+        </script>
+
+        
+
+</body>
+</html>
