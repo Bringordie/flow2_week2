@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+      <input type="submit" value="Show all users" id="showAll"/>
+      <form>
+          <input type="text" name="search user" id="searchByID" />
+          <input type="submit" value="search" id="searchID"/>
+      </form>
+      <form>
+          <input type="text" name="name" id="userName" />
+          <input type="text" name="age" id="userAge" />
+          <input type="text" name="gender" id="userGender" />
+          <input type="text" name="email" id="userEmail" />
+          <input type="submit" value="Add user" id="addUser"/>
+      </form>
+      <p id="addResponse"></p>
+      <form>
+          <input type="text" name="Delete user" id="DeleteByID" />
+          <input type="submit" value="Delete user" id="DeleteID"/>
+      </form>
+      <p id="deleteResponse"></p>
+      
+      <table id="userTable">
+          <tr><th>ID</th><th>Name</th><th>Age</th><th>Gender</th><th>Email</th></tr>
+          <div id="userTableInfo">
+          </div>
+      </table>
+          
+      
+  </div>
+  <script src="bundle.js"></script>
+</body>
+
+</html>
